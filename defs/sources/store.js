@@ -1,11 +1,12 @@
 module.exports = {
   id: 'store',
   adapter: 'couchdb',
-  baseUri: `${process.env.GR8_COUCH_URL}/${process.env.GR8_COUCH_DB}`,
+  auth: 'couchdb',
+  baseUri: `${process.env.CLOUDANT_URL}/${process.env.CLOUDANT_DB}`,
   endpoints: {
-    all: {uri: '/_all_docs', path: 'rows'},
-    one: '/{type}:{id}',
-    send: '/{type}:{id}'
+    get: {uri: '/_all_docs', path: 'rows'},
+    getone: '/{type}:{id}',
+    setone: '/{type}:{id}'
   },
   mappings: {
     '*': {}
