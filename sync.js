@@ -2,7 +2,7 @@ require('dotenv').config()
 const http = require('http')
 const integreat = require('integreat')
 const redisQueue = require('integreat-queue-redis')
-const port = 3000
+const port = process.env.PORT
 
 const queue = redisQueue({kue: {
   redis: {
@@ -35,7 +35,7 @@ server.listen(port, (err) => {
     return console.log('Server didn\'t start.', err)
   }
 
-  console.log('Server started on port', 3000)
+  console.log('Server started on port', port)
 
   great.schedule(schedules)
   .then((ret) => {
