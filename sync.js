@@ -7,7 +7,11 @@ const port = 3000
 const queue = redisQueue({kue: {
   redis: {
     port: process.env.REDIS_PORT,
-    host: process.env.REDIS_HOST
+    host: process.env.REDIS_HOST,
+    auth: process.env.REDIS_PASSWORD,
+    options: {
+      no_ready_check: true
+    }
   }
 }})
 
