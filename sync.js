@@ -4,9 +4,11 @@ const integreat = require('integreat')
 const redisQueue = require('integreat-queue-redis')
 const port = 3000
 
-const queue = redisQueue({redis: {
-  port: process.env.REDIS_PORT,
-  host: process.env.REDIS_HOST
+const queue = redisQueue({kue: {
+  redis: {
+    port: process.env.REDIS_PORT,
+    host: process.env.REDIS_HOST
+  }
 }})
 
 const defs = require('./defs')
