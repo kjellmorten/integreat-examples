@@ -4,7 +4,7 @@
   "description": "Examples to demonstrate and test Integreat features",
   "main": "index.js",
   "scripts": {
-    "start": "node sync.js",
+    "start": "DEBUG=great node sync.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
