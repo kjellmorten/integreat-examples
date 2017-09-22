@@ -4,10 +4,11 @@ module.exports = {
   id: 'nytimes',
   adapter: 'json',
   baseUri: 'http://api.nytimes.com/svc/',
+  handleMeta: 'store',
   endpoints: {
     get: {
       uri: `topstories/v2/technology.json?api-key=${process.env.NYTIMES_API_KEY}`,
-      path: 'results'
+      path: 'results[]'
     }
   },
   mappings: {
