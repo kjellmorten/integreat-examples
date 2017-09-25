@@ -4,7 +4,9 @@ module.exports = {
     require('./sources/store')
   ],
   datatypes: [
-    require('./types/article')
+    require('./types/account'),
+    require('./types/article'),
+    require('./types/meta')
   ],
   auths: [
     require('./auths/couchdb')
