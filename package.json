@@ -1,30 +1,31 @@
 {
   "name": "integreat-examples",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Examples to demonstrate and test Integreat features",
+  "author": "Kjell-Morten Bratsberg Thorsen <post@kjellmorten.no> (http://kjellmorten.no)",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=great node sync.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "8.1.x",
+    "node": "8.4.x",
     "npm": ">= 5.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kjellmorten/integreat-examples.git"
   },
-  "author": "Kjell-Morten Bratsberg Thorsen <post@kjellmorten.no> (http://kjellmorten.no)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/kjellmorten/integreat-examples/issues"
   },
   "homepage": "https://github.com/kjellmorten/integreat-examples#readme",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "integreat": "^0.3.0",
-    "integreat-queue-redis": "^0.1.0"
+    "integreat": "^0.4.0",
+    "integreat-queue-redis": "^0.1.2",
+    "integreat-source-couchdb": "^0.1.0"
   },
   "devDependencies": {
     "standard": "^10.0.3"

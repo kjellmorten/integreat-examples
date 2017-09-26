@@ -14,11 +14,11 @@ module.exports = {
   mappings: {
     article: {
       attributes: {
-        id: {path: 'url'},
+        id: 'url',
         title: {},
         abstract: {},
-        createdAt: {path: 'created_date'},
-        updatedAt: {path: 'updated_date'},
+        createdAt: 'created_date',
+        updatedAt: 'updated_date',
         url: {},
         byline: {}
       }

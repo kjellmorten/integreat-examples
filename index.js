@@ -1,13 +1,18 @@
 require('dotenv').config()
 const integreat = require('integreat')
+const couchdb = require('integreat-source-couchdb')
 const queue = require('integreat-queue-redis')()
 const debug = require('debug')('great')
 
+// Remove any scheduled jobs
+// queue.flushScheduled()
+
 // Prepare defs
 const defs = require('./config')
-const resources = Object.assign({
-  queue
-}, integreat.resources())
+const {bindToQueue} = queue
+const resources = couchdb(Object.assign({
+  bindToQueue
+}, integreat.resources()))
 
 // Create new Integreat instance
 const great = integreat(defs, resources)
