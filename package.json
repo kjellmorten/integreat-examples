@@ -23,7 +23,7 @@
   "homepage": "https://github.com/kjellmorten/integreat-examples#readme",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "integreat": "^0.4.0",
+    "integreat": "^0.4.1",
     "integreat-queue-redis": "^0.1.2",
     "integreat-source-couchdb": "^0.1.0"
   },

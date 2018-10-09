@@ -10,8 +10,8 @@ module.exports = {
     set: {uri: '/_bulk_docs', path: 'docs[]', method: 'POST'},
     setOne: '/{type}:{id}',
     getRevs: {uri: '/_all_docs{?keys=ids|wrap([, ", ", ]),include_docs=includeDocs?}', path: 'rows[]'},
-    getMeta: '/{type}:{id}',
-    setMeta: '/{type}:{id}'
+    getMeta: '/{id}',
+    setMeta: '/{id}'
   },
   mappings: {
     '*': {
